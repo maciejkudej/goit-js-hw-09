@@ -40,7 +40,7 @@ const instance = flatpickr(inputDate, options);
 const onClick = evt => {
   evt.preventDefault();
   buttonStart.disabled = true;
-  timerId = setInterval(() => {
+  const timerId = setInterval(() => {
     const values = convertMs(diffDate);
     daysValue.textContent = values.days;
     hoursValue.textContent = values.hours;
